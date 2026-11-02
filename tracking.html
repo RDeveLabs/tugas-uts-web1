@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking | MyBook's Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="brand" href="dashboard.html">MyBook's Store</a>
+        <nav><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a></nav>
+    </header>
+
+    <main class="container">
+        <p class="label-atas">PENGIRIMAN</p>
+        <h1>Tracking Pengiriman</h1>
+        <section class="panel">
+            <h2>Cek Nomor Delivery Order</h2>
+            <form id="formTracking" class="form-cari">
+                <input type="text" id="nomorDO" placeholder="Contoh: 20230012" required>
+                <button type="submit" class="tombol">Cari</button>
+            </form>
+            <p class="catatan">Nomor contoh: 20230012 atau 20230013</p>
+        </section>
+
+        <section class="panel hasil-tracking" id="hasilTracking" hidden></section>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan | MyBook's Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="brand" href="dashboard.html">MyBook's Store</a>
+        <nav><a href="dashboard.html">Dashboard</a><a href="stok.html">Katalog</a></nav>
+    </header>
+
+    <main class="container">
+        <p class="label-atas">PEMESANAN</p>
+        <h1>Checkout Buku</h1>
+        <section class="panel">
+            <h2>Daftar Pesanan</h2>
+            <p>Pilih buku dan jumlah yang ingin dibeli.</p>
+            <div class="form-grid">
+                <div>
+                    <label for="pilihBuku">Pilih Buku</label>
+                    <select id="pilihBuku"></select>
+                </div>
+                <div>
+                    <label for="jumlahBuku">Jumlah</label>
+                    <input type="number" id="jumlahBuku" min="1" value="1">
+                </div>
+                <div class="tombol-sejajar"><button type="button" class="tombol" id="tambahPesanan">Tambah Buku</button></div>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Nama Buku</th><th>Harga</th><th>Jumlah</th><th>Subtotal</th><th>Aksi</th></tr></thead>
+                    <tbody id="tabelPesanan"></tbody>
+                </table>
+            </div>
+            <h3 class="total">Total: <span id="totalHarga">Rp 0</span></h3>
+        </section>
+
+        <section class="panel">
+            <h2>Informasi Pemesan dan Pembayaran</h2>
+            <form id="formCheckout" class="form-grid">
+                <div><label for="namaPemesan">Nama Pemesan</label><input id="namaPemesan" required></div>
+                <div><label for="emailPemesan">Email</label><input id="emailPemesan" type="email" required></div>
+                <div><label for="alamatPemesan">Alamat Pengiriman</label><textarea id="alamatPemesan" rows="3" required></textarea></div>
+                <div>
+                    <label for="metodeBayar">Metode Pembayaran</label>
+                    <select id="metodeBayar" required>
+                        <option value="">Pilih pembayaran</option>
+                        <option>Transfer Bank</option><option>COD</option><option>E-Wallet</option>
+                    </select>
+                </div>
+                <button type="submit" class="tombol">Buat Pesanan</button>
+            </form>
+            <p class="catatan">Data pesanan tersimpan selama tab website masih terbuka. Data akan hilang saat tab ditutup.</p>
+        </section>
+
+        <section class="panel" id="riwayat">
+            <h2>History Transaksi</h2>
+            <div class="table-wrap">
+                <table><thead><tr><th>No. DO</th><th>Nama</th><th>Total</th><th>Pembayaran</th></tr></thead>
+                <tbody id="tabelRiwayat"></tbody></table>
+            </div>
+        </section>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

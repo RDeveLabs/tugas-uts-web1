@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyBook's Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="halaman-login">
+    <!-- Halaman Login -->
+    <main class="login-page">
+        <section class="login-layout">
+            <section class="login-box">
+                <h1>MyBook's Store</h1>
+                <p class="subjudul">Silakan masuk untuk memesan buku</p>
+
+                <form id="formLogin">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="contoh@email.com" required>
+
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="Masukkan password" required>
+
+                    <button type="submit" class="tombol">Login</button>
+                </form>
+
+                <div class="link-login">
+                    <button type="button" class="link-button" id="btnLupa">Lupa Password?</button>
+                    <span>|</span>
+                    <button type="button" class="link-button" id="btnDaftar">Daftar</button>
+                </div>
+            </section>
+
+            <div class="login-picture">
+                <img src="assets/sidepicture-login-form.webp" alt="Ilustrasi buku untuk halaman login">
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Lupa Password -->
+    <div class="modal" id="modalLupa">
+        <div class="modal-content">
+            <button class="tutup" type="button" data-tutup="modalLupa">&times;</button>
+            <h2>Lupa Password</h2>
+            <p>Masukkan email yang digunakan saat mendaftar.</p>
+            <input type="email" id="emailLupa" placeholder="Email kamu">
+            <button class="tombol" type="button" id="kirimLupa">Kirim</button>
+        </div>
+    </div>
+
+    <!-- Modal Daftar -->
+    <div class="modal" id="modalDaftar">
+        <div class="modal-content">
+            <button class="tutup" type="button" data-tutup="modalDaftar">&times;</button>
+            <h2>Daftar Akun</h2>
+            <p>Buat akun baru untuk menggunakan toko buku.</p>
+            <input type="text" id="namaDaftar" placeholder="Nama lengkap" required>
+            <input type="email" id="emailDaftar" placeholder="Email" required>
+            <input type="password" id="passwordDaftar" placeholder="Password" required>
+            <button class="tombol" type="button" id="kirimDaftar">Daftar</button>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

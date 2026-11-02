@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Color Pallete */
+:root {
+    --maroon: #790D16;
+    --beige: #E5D3AF;
+    --cream: #F5EFE1;
+    --blue: #AEC4D4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: var(--cream);
+    color: #3a2928;
+    line-height: 1.5;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* navigasi */
+.header {
+    background: var(--maroon);
+    color: var(--cream);
+    padding: 16px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid var(--beige);
+}
+
+.brand {
+    font-size: 21px;
+    font-weight: 600;
+    color: var(--cream);
+}
+
+.header nav {
+    display: flex;
+    gap: 22px;
+}
+
+.header nav a, .keluar {
+    color: var(--cream);
+}
+
+.header nav a:hover, .keluar:hover {
+    color: var(--beige);
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 30px auto;
+}
+
+h1, h2, h3, p {
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 29px;
+    margin-bottom: 12px;
+    color: var(--maroon);
+}
+
+h2 {
+    font-size: 21px;
+    color: var(--maroon);
+}
+
+/* Sambutan dashboard */
+.sambutan {
+    background: var(--beige);
+    padding: 22px 26px;
+    border-radius: 10px;
+    margin-bottom: 28px;
+}
+
+.sambutan h1 {
+    margin-bottom: 0;
+    line-height: 1.3;
+}
+
+.sambutan .tanggal-sambutan {
+    margin: 3px 0 9px;
+    color: #654b43;
+    font-size: 13px;
+}
+
+.sambutan p:last-child {
+    margin-bottom: 0;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.menu-card, .panel, .login-box {
+    background: #fffaf0;
+    border: 1px solid var(--beige);
+    border-radius: 10px;
+    padding: 22px;
+}
+
+.menu-card:hover {
+    border-color: var(--maroon);
+    transform: translateY(-2px);
+}
+
+.menu-icon {
+    font-size: 30px;
+}
+
+.menu-card h3 {
+    margin: 10px 0 5px;
+    color: var(--maroon);
+}
+
+.menu-card p, .panel p {
+    color: #725f56;
+    margin-bottom: 0;
+}
+
+.label-atas {
+    color: var(--maroon);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.judul-halaman {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.table-wrap {
+    overflow-x: auto;
+    background: #fffaf0;
+    border: 1px solid var(--beige);
+    border-radius: 8px;
+    margin: 18px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 650px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--beige);
+    font-size: 14px;
+}
+
+th {
+    background: var(--blue);
+    color: var(--maroon);
+}
+
+.cover-buku {
+    width: 48px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.panel {
+    margin-top: 22px;
+}
+
+.form-panel h2 {
+    margin-bottom: 5px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 18px;
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--maroon);
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid var(--blue);
+    border-radius: 6px;
+    font: inherit;
+    background: #fffdf8;
+    color: #3a2928;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: 2px solid var(--beige);
+    border-color: var(--maroon);
+}
+
+.tombol {
+    border: 0;
+    background: var(--maroon);
+    color: var(--cream);
+    padding: 11px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tombol:hover {
+    background: #5e0911;
+}
+
+.tombol-kecil {
+    padding: 9px 14px;
+}
+
+.tombol-sejajar {
+    display: flex;
+    align-items: end;
+}
+
+.total {
+    text-align: right;
+    color: var(--maroon);
+    margin-top: 15px;
+}
+
+.form-cari {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.form-cari input {
+    max-width: 400px;
+}
+
+.status {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 20px;
+    background: var(--beige);
+    color: var(--maroon);
+    font-size: 13px;
+}
+
+.progress {
+    height: 10px;
+    background: var(--blue);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 0 22px;
+}
+
+.progress div {
+    height: 100%;
+    background: var(--maroon);
+    width: 70%;
+}
+
+.detail-list {
+    padding-left: 20px;
+}
+
+.detail-list li {
+    margin-bottom: 12px;
+}
+
+.catatan {
+    font-size: 12px;
+    color: #725f56;
+    margin-top: 16px;
+}
+
+.link-button {
+    background: none;
+    border: 0;
+    color: var(--maroon);
+    cursor: pointer;
+    font: inherit;
+}
+
+.link-button:hover {
+    text-decoration: underline;
+}
+
+/* Tampilan halaman login */
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background-image: linear-gradient(#790d16aa, #790d1680), url("../assets/bg-login.webp");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-layout {
+    width: 100%;
+    max-width: 850px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #fffaf0;
+    box-shadow: 0 12px 35px #30070b55;
+}
+
+.login-box {
+    width: 100%;
+    padding: 38px 34px;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    align-self: center;
+}
+
+.login-box h1 {
+    text-align: center;
+    color: var(--maroon);
+    font-size: 27px;
+}
+
+.subjudul {
+    text-align: center;
+    color: #725f56;
+    margin-bottom: 25px;
+}
+
+#formLogin label {
+    margin-top: 14px;
+}
+
+#formLogin .tombol {
+    width: 100%;
+    margin-top: 22px;
+}
+
+.link-login {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 18px;
+    font-size: 13px;
+}
+
+.login-box .catatan {
+    text-align: center;
+}
+
+.login-picture {
+    min-height: 500px;
+    background: var(--blue);
+}
+
+.login-picture img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+}
+
+/* Modal daftar dan lupa password */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    inset: 0;
+    background: #260609aa;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: var(--cream);
+    width: 100%;
+    max-width: 390px;
+    border: 1px solid var(--beige);
+    border-radius: 10px;
+    padding: 25px;
+    position: relative;
+}
+
+.modal-content input {
+    margin: 7px 0;
+}
+
+.modal-content .tombol {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.tutup {
+    position: absolute;
+    top: 8px;
+    right: 13px;
+    border: 0;
+    background: none;
+    color: var(--maroon);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 700px) {
+    .login-layout {
+        max-width: 430px;
+        grid-template-columns: 1fr;
+    }
+
+    .login-picture {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        width: 92%;
+        margin: 22px auto;
+    }
+
+    .header {
+        padding: 14px 4%;
+    }
+
+    .header nav {
+        gap: 10px;
+        font-size: 13px;
+    }
+
+    .menu-grid, .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .judul-halaman {
+        align-items: flex-start;
+        gap: 12px;
+        flex-direction: column;
+    }
+
+    .form-cari {
+        flex-direction: column;
+    }
+
+    .form-cari input {
+        max-width: none;
+    }
+}

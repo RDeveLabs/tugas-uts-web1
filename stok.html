@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Buku | MyBook's Store</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <a class="brand" href="dashboard.html">MyBook's Store</a>
+        <nav><a href="dashboard.html">Dashboard</a><a href="checkout.html">Pemesanan</a></nav>
+    </header>
+
+    <main class="container">
+        <div class="judul-halaman">
+            <div><p class="label-atas">KOLEKSI BUKU</p><h1>Informasi Stok / Katalog</h1></div>
+            <a class="tombol tombol-kecil" href="checkout.html">Pesan Buku</a>
+        </div>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>No</th><th>Cover</th><th>Kode</th><th>Nama Buku</th>
+                        <th>Jenis</th><th>Edisi</th><th>Stok</th><th>Harga</th>
+                    </tr>
+                </thead>
+                <tbody id="tabelKatalog"></tbody>
+            </table>
+        </div>
+
+        <section class="panel form-panel">
+            <h2>Tambah Buku Baru</h2>
+            <p>Isi data di bawah untuk menambahkan buku ke tabel.</p>
+            <form id="formTambahBuku" class="form-grid">
+                <div><label for="kodeBaru">Kode Barang</label><input id="kodeBaru" required></div>
+                <div><label for="namaBaru">Nama Buku</label><input id="namaBaru" required></div>
+                <div><label for="jenisBaru">Jenis Buku</label><input id="jenisBaru" value="Buku Ajar" required></div>
+                <div><label for="edisiBaru">Edisi</label><input id="edisiBaru" type="number" min="1" value="1" required></div>
+                <div><label for="stokBaru">Jumlah Stok</label><input id="stokBaru" type="number" min="0" required></div>
+                <div><label for="hargaBaru">Harga (angka)</label><input id="hargaBaru" type="number" min="0" placeholder="150000" required></div>
+                <button type="submit" class="tombol">Tambah ke Katalog</button>
+            </form>
+        </section>
+    </main>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
